@@ -13,8 +13,8 @@
 # exclusion or limitation is prohibited, void or unenforceable under governing
 # law.
 #
+#!/usr/bin/env bash
 set -euo pipefail
-command -v copywrite >/dev/null 2>&1 || { echo "copywrite not found on PATH"; exit 1; }
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 HOOK_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"

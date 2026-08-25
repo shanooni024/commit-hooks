@@ -14,17 +14,17 @@
 #
 - id: ccdc-copywrite-check
   name: CCDC Copywrite header check
+  language: golang
+  additional_dependencies:
+    - github.com/hashicorp/copywrite@v1.1.3
   entry: main/hooks/copywrite_check.sh
-  language: python
   pass_filenames: false
-  additional_dependencies: 
-   - copywrite==1.1.3
 
 - id: ccdc-copywrite-fix
   name: CCDC Copywrite header fix
+  language: golang
+  additional_dependencies:
+    - github.com/hashicorp/copywrite@v1.1.3
   entry: main/hooks/copywrite_fix.sh
-  language: python
   pass_filenames: false
   stages: [manual]
-  additional_dependencies: 
-  - copywrite==1.1.3
